@@ -28,10 +28,10 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: showNavbar ? 0 : -100 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="nav-styles sm:px-16 px-6"
+      className="bg-primary nav-styles sm:px-16 px-6"
     >
       {/* Logo */}
-      <a href="#home">
+      <a data-cy="logo" href="#home">
         <img
           src={parthmittal}
           alt="Parth Mittal"
@@ -63,7 +63,7 @@ const Navbar = () => {
         <img
           src={toggle ? close : menu}
           alt="menu"
-          className="w-[28px] h-[28px] object-contain"
+          className="w-[28px] h-[28px] object-contain cursor-pointer"
           // correct way to change state using the prev
           // version of the same state using a callback function
           onClick={() => setToggle((prev) => !prev)}

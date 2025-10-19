@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "axios": "^1.12.2",
@@ -22,7 +23,7 @@
     "@types/react-dom": "^19.2.1",
     "@vitejs/plugin-react": "^5.0.4",
     "autoprefixer": "^10.4.21",
-    "cypress": "^15.4.0",
+    "cypress": "^15.5.0",
     "netlify-cli": "^23.9.1",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.13",

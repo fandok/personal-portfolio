@@ -1,13 +1,13 @@
-import React from "react";
+import { createElement } from "react";
 import { experiences, skills } from "../constants";
 import { layout } from "../style";
 import { motion } from "framer-motion";
 
-export const SkillIcon = ({ icon, name }) => {
+const SkillIcon = ({ icon, name }) => {
   return (
     <div className="flex flex-col">
       <span className="text-white text-[30px] hover:text-teal-200">
-        {React.createElement(icon)}
+        {createElement(icon)}
       </span>
       <p className="font-poppins text-dimWhite text-[12px] mt-2">{name}</p>
     </div>
@@ -59,8 +59,8 @@ const Content = ({ text, link }) => {
 const ExperienceCard = (props) => {
   return (
     <motion.div
-    whileInView={{ y: [-20, 0], opacity: [0, 1] }}
-    transition={{ duration: 1 }}
+      whileInView={{ y: [-20, 0], opacity: [0, 1] }}
+      transition={{ duration: 1 }}
     >
       <div className="flex flex-row items-center mb-6">
         <img
