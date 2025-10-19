@@ -67,12 +67,14 @@ const Navbar = () => {
           // correct way to change state using the prev
           // version of the same state using a callback function
           onClick={() => setToggle((prev) => !prev)}
+          data-cy="dropdown"
         />
 
         <div
           className={`${toggle ? "flex" : "hidden"} p-6 bg-black-gradient
         absolute top-20 right-0 mx-4 my-2
         min-w-[140px] rounded-xl sidebar`}
+          data-cy="dropdown-list"
         >
           <ul className="list-none flex flex-col justify-end items-center flex-1">
             {navLinks.map((nav, index) => (
@@ -84,6 +86,7 @@ const Navbar = () => {
                 text-[16px]
                 ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}
                 text-white`}
+                data-cy={nav.id}
               >
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
